@@ -5,6 +5,10 @@ import Gender from "../components/gender";
 import Intro from "../components/intro";
 import AreYouPregnant from "../components/AreYouPregnant";
 import AreYouDiabetic from "../components/AreYouDiabetic";
+import AnySymptoms from "../components/AnySymptoms";
+import HaveYou from "../components/HaveYou";
+import YourSugarLevel from "../components/YourSugarLevel";
+import Result from "../components/Result";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +34,22 @@ const router = createBrowserRouter([
             {
                 path: "/are-you-diabetic",
                 element: <AreYouDiabetic />
+            },
+            {
+                path: "/any-symptoms",
+                element: <AnySymptoms />
+            },
+            {
+                path: "/have-you",
+                element: <HaveYou />
+            },
+            {
+                path: "/your-sugar-level",
+                element: <YourSugarLevel />
+            },
+            {
+                path: "/result",
+                element: <Result />
             }
         ]
     },
