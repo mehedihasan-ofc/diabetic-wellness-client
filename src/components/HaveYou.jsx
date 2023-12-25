@@ -44,6 +44,9 @@ const HaveYou = () => {
         if (haveYou.none === true) {
             return navigate('/your-sugar-level')
         }
+        else if (haveYou.none === false) {
+            return navigate('/your-sugar-level')
+        }
         else {
             return navigate('/')
         }
@@ -53,7 +56,7 @@ const HaveYou = () => {
         <div className="max-w-md mx-auto shadow-md p-10 border">
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label className="block text-gray-700 mb-1">Have you experienced any of these haveYou?</label>
+                    <label className="block text-gray-700 mb-1">Have you?</label>
                     <div>
                         <label className="flex items-center mb-2">
                             <input

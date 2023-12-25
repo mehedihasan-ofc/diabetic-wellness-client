@@ -35,6 +35,9 @@ const YourSugarLevel = () => {
         if (sugarLevel < 4) {
             return navigate('/result')
         }
+        else if(sugarLevel > 4 && sugarLevel < 10) {
+            return navigate('/result')
+        }
         else {
             return navigate('/')
         }

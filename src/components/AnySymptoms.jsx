@@ -61,6 +61,9 @@ const AnySymptoms = () => {
         if (symptoms.none === true) {
             return navigate('/have-you')
         }
+        else if (symptoms.none === false) {
+            return navigate('/your-sugar-level')
+        }
         else {
             return navigate('/')
         }
@@ -70,7 +73,7 @@ const AnySymptoms = () => {
         <div className="max-w-md mx-auto shadow-md p-10 border">
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label className="block text-gray-700 mb-1">Do you have any of these symptoms?</label>
+                    <label className="block text-gray-700 mb-1">Have you any symptoms from this?</label>
                     <div>
                         <label className="flex items-center mb-2">
                             <input
