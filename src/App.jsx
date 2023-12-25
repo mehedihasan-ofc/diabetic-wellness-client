@@ -5,9 +5,15 @@ import Navbar from './components/Navbar';
 const App = () => {
   return (
     <>
-      <Navbar />
-      <div className='my-container my-10'>
-        <Outlet />
+      <div className='relative'>
+        <Navbar />
+        <div className='my-container my-10'>
+          <Outlet />
+        </div>
+
+        {/* Gradiendts */}
+        <div className='gradient-01 z-0 absolute'></div>
+        <div className='gradient-02 z-0 absolute'></div>
       </div>
     </>
   );
