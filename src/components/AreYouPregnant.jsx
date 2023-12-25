@@ -40,7 +40,7 @@ const AreYouPregnant = () => {
         <div className="max-w-md mx-auto shadow-md p-10 border">
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label className="block text-gray-700 mb-1">Are you Pregnant?</label>
+                    <label className="block text-gray-700 mb-2">Are you Pregnant?</label>
                     <div className="flex items-center">
                         <label className="mr-4">
                             <input

@@ -6,7 +6,7 @@ const Intro = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    // Load data from local storage on component mount
+    //==> Load data from local storage on component mount
     useEffect(() => {
         const storedData = localStorage.getItem('userData');
         if (storedData) {
@@ -29,10 +29,10 @@ const Intro = () => {
         
         console.log(formData);
 
-        // Save data to local storage
+        //==> Save data to local storage
         localStorage.setItem('userData', JSON.stringify(formData));
 
-        // Navigate to the next page
+        //==> Navigate to the next page
         navigate('/gender');
     };
 
