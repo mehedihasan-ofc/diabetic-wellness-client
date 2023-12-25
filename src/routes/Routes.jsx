@@ -11,6 +11,7 @@ import YourSugarLevel from "../components/YourSugarLevel";
 import Result from "../components/Result";
 import AnyHeartIssues from "../components/AnyHeartIssues";
 import AnyKidneyProblems from "../components/AnyKidneyProblems";
+import AnyBelowSymptoms from "../components/AnyBelowSymptoms";
 
 const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
             {
                 path: "/any-kidney-problems",
                 element: <AnyKidneyProblems />
+            },
+            {
+                path: "/any-below-symptoms",
+                element: <AnyBelowSymptoms />
             },
             {
                 path: "/result",

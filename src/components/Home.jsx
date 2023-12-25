@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        localStorage.removeItem("userData");
+    }, [])
 
     return (
         <section className="lg:w-9/12 md:w-[90%] w-[95%] mx-auto text-center">

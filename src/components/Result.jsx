@@ -80,7 +80,19 @@ const Result = () => {
             data?.symptoms?.none === false &&
             parseFloat(data?.sugarLevel) < 10
         ) {
-            setUserResult("You are non diabetic & have kidney issue consulting doctor as soon as possible");
+            if (data?.hasKidneyProblems === "yes") {
+                setUserResult("You are non diabetic & have kidney issue consulting doctor as soon as possible");
+            }
+            else if (
+                data?.hasKidneyProblems === "no",
+                data?.bellowSymptoms?.none === false
+            ) {
+                setUserResult("You are non diabetic & have kidney issue consulting doctor as soon as possible");
+            }
+            else {
+                setUserResult('');
+                navigate('/any-kidney-problems')
+            }
         }
         else {
             setUserResult('');
