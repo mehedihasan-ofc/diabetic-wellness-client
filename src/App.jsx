@@ -6,7 +6,9 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <div className='my-container my-10'>
+        <Outlet />
+      </div>
     </>
   );
 };
