@@ -42,11 +42,11 @@ const Intro = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto shadow-md p-10 border">
+        <div className="max-w-xl mx-auto shadow-md p-10 border">
             {error && <p className='text-red-500 my-5'>{error}</p>}
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="nameInput" className="block text-gray-700 mb-1">What's your name?</label>
+                    <label htmlFor="nameInput" className="block text-gray-700 mb-2">What's your name?</label>
                     <input
                         type="text"
                         id="nameInput"
@@ -57,8 +57,8 @@ const Intro = () => {
                         className="w-full px-4 py-2 border rounded outline-none"
                     />
                 </div>
-                <div className="mb-8">
-                    <label htmlFor="ageInput" className="block text-gray-700 mb-1">What is your age?</label>
+                <div className="mb-10">
+                    <label htmlFor="ageInput" className="block text-gray-700 mb-2">What is your age?</label>
                     <input
                         type="number"
                         id="ageInput"

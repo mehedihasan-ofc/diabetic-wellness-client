@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { IoMdDownload } from "react-icons/io";
 
 const Result = () => {
     const [data, setData] = useState({});
@@ -126,26 +127,33 @@ const Result = () => {
 
     return (
         <div>
-            <div className="overflow-x-auto my-10">
-                <table className="table-auto w-full border-collapse border">
-                    <thead>
-                        <tr className="bg-gray-200">
-                            <th className="border p-3">Name</th>
-                            <th className="border p-3">Age</th>
-                            <th className="border p-3">Gender</th>
-                            <th className="border p-3">Result</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="bg-white">
-                            <td className="border p-3 text-center">{data?.name}</td>
-                            <td className="border p-3 text-center">{data?.age}</td>
-                            <td className="border p-3 text-center">{data?.gender}</td>
-                            <td className="border p-3 text-center text-xs">{userResult}</td>
-                        </tr>
-                        {/* Add more rows here if needed */}
-                    </tbody>
-                </table>
+            <div className='my-10 shadow-md'>
+
+                <div className='flex justify-end items-center p-5'>
+                    <IoMdDownload className='text-2xl border cursor-pointer' />
+                </div>
+
+                <div className="overflow-x-auto">
+                    <table className="table-auto w-full border-collapse border">
+                        <thead>
+                            <tr className="bg-gray-200">
+                                <th className="border p-3">Name</th>
+                                <th className="border p-3">Age</th>
+                                <th className="border p-3">Gender</th>
+                                <th className="border p-3">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className="bg-white">
+                                <td className="border p-3 text-center">{data?.name}</td>
+                                <td className="border p-3 text-center">{data?.age}</td>
+                                <td className="border p-3 text-center">{data?.gender}</td>
+                                <td className="border p-3 text-center text-xs">{userResult}</td>
+                            </tr>
+                            {/* Add more rows here if needed */}
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div className='text-center'>

@@ -70,10 +70,10 @@ const AnySymptoms = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto shadow-md p-10 border">
+        <div className="max-w-xl mx-auto shadow-md p-10 border">
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label className="block text-gray-700 mb-1">Have you any symptoms from this?</label>
+                    <label className="block text-gray-700 text-xl mb-4">Have you any symptoms from this?</label>
                     <div>
                         <label className="flex items-center mb-2">
                             <input
@@ -160,7 +160,7 @@ const AnySymptoms = () => {
                     {error && <p className="text-red-500 mt-2">{error}</p>}
                 </div>
 
-                <div className='flex justify-between mt-5'>
+                <div className='flex justify-between mt-6'>
                     <button onClick={() => navigate(-1)} className="bg-red-600 px-10 py-2 text-white rounded">Prev</button>
                     <button type="submit" className="bg-green-600 px-10 py-2 text-white rounded">Next</button>
                 </div>

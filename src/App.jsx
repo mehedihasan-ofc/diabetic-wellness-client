@@ -7,7 +7,7 @@ const App = () => {
     <>
       <div className='relative'>
         <Navbar />
-        <div className='my-container my-10'>
+        <div className='my-container my-5'>
           <Outlet />
         </div>
 

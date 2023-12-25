@@ -47,10 +47,10 @@ const YourSugarLevel = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto shadow-md p-10 border">
+        <div className="max-w-xl mx-auto shadow-md p-10 border">
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
-                    <label htmlFor="sugarLevelInput" className="block text-gray-700 mb-1">Your sugar level? (empty stomach) in mmol/L</label>
+                    <label htmlFor="sugarLevelInput" className="block text-xl text-gray-700 mb-2">Your sugar level? (empty stomach) in mmol/L</label>
                     <input
                         type="number"
                         id="sugarLevelInput"
@@ -62,7 +62,7 @@ const YourSugarLevel = () => {
                     {error && <p className="text-red-500 mt-2">{error}</p>}
                 </div>
 
-                <div className='flex justify-between mt-5'>
+                <div className='flex justify-between mt-10'>
                     <button onClick={() => navigate(-1)} className="bg-red-600 px-10 py-2 text-white rounded">Prev</button>
                     <button type="submit" className="bg-green-600 px-10 py-2 text-white rounded" disabled={error}>Next</button>
                 </div>
