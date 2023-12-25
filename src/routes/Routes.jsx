@@ -4,6 +4,7 @@ import Home from "../components/Home";
 import Gender from "../components/gender";
 import Intro from "../components/intro";
 import AreYouPregnant from "../components/AreYouPregnant";
+import AreYouDiabetic from "../components/AreYouDiabetic";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: "/are-you-pregnent",
                 element: <AreYouPregnant />
+            },
+            {
+                path: "/are-you-diabetic",
+                element: <AreYouDiabetic />
             }
         ]
     },

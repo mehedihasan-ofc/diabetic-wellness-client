@@ -34,6 +34,12 @@ const AreYouPregnant = () => {
         localStorage.setItem("userData", JSON.stringify(updatedData));
 
         // Perform any other actions here, like storing data or navigation
+        if (isPregnant === "yes") {
+            return navigate('/')
+        }
+        else {
+            return navigate('/are-you-diabetic')
+        }
     };
 
     return (
