@@ -89,10 +89,35 @@ const Result = () => {
             ) {
                 setUserResult("You are non diabetic & have kidney issue consulting doctor as soon as possible");
             }
+            else if (
+                data?.hasKidneyProblems === "no",
+                data?.bellowSymptoms?.none === true
+            ) {
+                setUserResult("non d & medicine doctor");
+            }
             else {
                 setUserResult('');
                 navigate('/any-kidney-problems')
             }
+        }
+        else if (
+            data?.name &&
+            data?.gender &&
+            data?.isDiabetic === 'no' &&
+            data?.symptoms?.none === false &&
+            parseFloat(data?.sugarLevel) >= 10 &&
+            parseFloat(data?.sugarLevel) < 12.6
+        ) {
+            setUserResult("Pre diabetics");
+        }
+        else if (
+            data?.name &&
+            data?.gender &&
+            data?.isDiabetic === 'yes' &&
+            parseFloat(data?.sugarLevel) >= 10 &&
+            parseFloat(data?.sugarLevel) < 12.5
+        ) {
+            setUserResult("Pre diabetics");
         }
         else {
             setUserResult('');
@@ -100,26 +125,32 @@ const Result = () => {
     }, [data, navigate]);
 
     return (
-        <div className="overflow-x-auto my-10">
-            <table className="table-auto w-full border-collapse border">
-                <thead>
-                    <tr className="bg-gray-200">
-                        <th className="border p-3">Name</th>
-                        <th className="border p-3">Age</th>
-                        <th className="border p-3">Gender</th>
-                        <th className="border p-3">Result</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr className="bg-white">
-                        <td className="border p-3 text-center">{data?.name}</td>
-                        <td className="border p-3 text-center">{data?.age}</td>
-                        <td className="border p-3 text-center">{data?.gender}</td>
-                        <td className="border p-3 text-center text-xs">{userResult}</td>
-                    </tr>
-                    {/* Add more rows here if needed */}
-                </tbody>
-            </table>
+        <div>
+            <div className="overflow-x-auto my-10">
+                <table className="table-auto w-full border-collapse border">
+                    <thead>
+                        <tr className="bg-gray-200">
+                            <th className="border p-3">Name</th>
+                            <th className="border p-3">Age</th>
+                            <th className="border p-3">Gender</th>
+                            <th className="border p-3">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="bg-white">
+                            <td className="border p-3 text-center">{data?.name}</td>
+                            <td className="border p-3 text-center">{data?.age}</td>
+                            <td className="border p-3 text-center">{data?.gender}</td>
+                            <td className="border p-3 text-center text-xs">{userResult}</td>
+                        </tr>
+                        {/* Add more rows here if needed */}
+                    </tbody>
+                </table>
+            </div>
+
+            <div className='text-center'>
+                <button onClick={() => navigate('/')} className="bg-green-600 px-10 py-2 text-white rounded">Check Again</button>
+            </div>
         </div>
     );
 };

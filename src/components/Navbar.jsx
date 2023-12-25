@@ -14,9 +14,6 @@ const Navbar = () => {
                         </p>
                     </div>
                 </Link>
-                <button id="btn-blog" className="bg-green-600 font-light text-sm px-5 py-1 rounded text-white">
-                    Ask More
-                </button>
             </nav>
         </header>
     );

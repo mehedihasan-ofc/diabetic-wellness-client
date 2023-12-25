@@ -50,6 +50,9 @@ const AnyBelowSymptoms = () => {
         if(bellowSymptoms?.none === false) {
             return navigate('/result')
         }
+        else if (bellowSymptoms?.none === true) {
+            return navigate('/result')
+        }
     };
 
     return (

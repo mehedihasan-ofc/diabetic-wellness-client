@@ -38,7 +38,7 @@ const Gender = () => {
             return navigate('/are-you-pregnent')
         }
         else {
-            return navigate('/')
+            return navigate('/are-you-diabetic')
         }
     };
 

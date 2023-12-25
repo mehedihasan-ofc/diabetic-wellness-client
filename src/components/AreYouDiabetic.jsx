@@ -33,7 +33,7 @@ const AreYouDiabetic = () => {
 
         // Perform any other actions here, like storing data or navigation
         if (isDiabetic === "yes") {
-            return navigate('/')
+            return navigate('/your-sugar-level')
         }
         else {
             return navigate('/any-symptoms')
