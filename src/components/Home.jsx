@@ -24,8 +24,7 @@ const Home = () => {
                         <span className="bg-orange-200 px-2 rounded">2. Non-Discriminatory:</span> No judgment based on health or gender.
                     </li>
                     <li className="my-5">
-                        <span className="bg-orange-200 px-2 rounded">3. Purpose Clarity:</span> Quiz aims to inform, not replace medical advice.
-                        questions.
+                        <span className="bg-orange-200 px-2 rounded">3. Purpose Clarity:</span> Questions aims to inform, not replace medical advice.
                     </li>
                     <li className="my-5">
                         <span className="bg-orange-200 px-2 rounded">4. Optional Participation:</span> Answer as comfortable; participation is voluntary.

@@ -10,10 +10,6 @@ const App = () => {
         <div className='my-container my-5'>
           <Outlet />
         </div>
-
-        {/* Gradiendts */}
-        <div className='gradient-01 z-0 absolute'></div>
-        <div className='gradient-02 z-0 absolute'></div>
       </div>
     </>
   );

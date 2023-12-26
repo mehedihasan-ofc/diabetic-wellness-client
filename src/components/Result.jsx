@@ -147,7 +147,7 @@ const Result = () => {
                             <tr className="bg-white">
                                 <td className="border p-3 text-center">{data?.name}</td>
                                 <td className="border p-3 text-center">{data?.age}</td>
-                                <td className="border p-3 text-center">{data?.gender}</td>
+                                <td className="border p-3 text-center capitalize">{data?.gender}</td>
                                 <td className="border p-3 text-center text-xs">{userResult}</td>
                             </tr>
                             {/* Add more rows here if needed */}
