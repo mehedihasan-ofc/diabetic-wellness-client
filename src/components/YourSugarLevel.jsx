@@ -41,6 +41,9 @@ const YourSugarLevel = () => {
         else if (sugarLevel >=10 && sugarLevel < 12.6) {
             return navigate('/result')
         }
+        else if (sugarLevel > 12.5) {
+            return navigate('/sugar-levels-fluctuate')
+        }
         else {
             return navigate('/')
         }

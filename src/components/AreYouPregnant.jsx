@@ -35,7 +35,7 @@ const AreYouPregnant = () => {
 
         // Perform any other actions here, like storing data or navigation
         if (isPregnant === "yes") {
-            return navigate('/')
+            return navigate('/ask-more')
         }
         else {
             return navigate('/are-you-diabetic')

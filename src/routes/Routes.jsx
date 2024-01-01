@@ -12,6 +12,9 @@ import Result from "../components/Result";
 import AnyHeartIssues from "../components/AnyHeartIssues";
 import AnyKidneyProblems from "../components/AnyKidneyProblems";
 import AnyBelowSymptoms from "../components/AnyBelowSymptoms";
+import AskMore from "../components/AskMore";
+import SugarLevelsFluctuate from "../components/SugarLevelsFluctuate";
+import SpecificGoals from "../components/SpecificGoals";
 
 const router = createBrowserRouter([
     {
@@ -63,8 +66,20 @@ const router = createBrowserRouter([
                 element: <AnyBelowSymptoms />
             },
             {
+                path: "/sugar-levels-fluctuate",
+                element: <SugarLevelsFluctuate />
+            },
+            {
+                path: "/specific-goals",
+                element: <SpecificGoals />
+            },
+            {
                 path: "/result",
                 element: <Result />
+            },
+            {
+                path: "/ask-more",
+                element: <AskMore />
             }
         ]
     },
