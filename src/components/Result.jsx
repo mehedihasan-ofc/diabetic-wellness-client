@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { IoMdDownload } from "react-icons/io";
+import { jsPDF } from "jspdf";
+import 'jspdf-autotable';
 
 const Result = () => {
     const [data, setData] = useState({});
@@ -125,16 +127,27 @@ const Result = () => {
         }
     }, [data, navigate]);
 
+    const exportPdf = async () => {
+        const doc = jsPDF({orientation: 'landscape'});
+
+        doc.autoTable({
+            html: '#result-table',
+            theme: 'grid'
+        })
+
+        doc.save('result.pdf')
+    }
+
     return (
         <div>
             <div className='my-10 shadow-md'>
 
                 <div className='flex justify-end items-center p-5'>
-                    <IoMdDownload className='text-2xl border cursor-pointer' />
+                    <IoMdDownload onClick={exportPdf} className='text-2xl border cursor-pointer' />
                 </div>
 
                 <div className="overflow-x-auto">
-                    <table className="table-auto w-full border-collapse border">
+                    <table id='result-table' className="table-auto w-full border-collapse border">
                         <thead>
                             <tr className="bg-gray-200">
                                 <th className="border p-3">Name</th>
