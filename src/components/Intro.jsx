@@ -27,7 +27,6 @@ const Intro = () => {
             return;
         }
         
-        console.log(formData);
 
         //==> Save data to local storage
         localStorage.setItem('userData', JSON.stringify(formData));

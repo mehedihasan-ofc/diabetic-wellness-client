@@ -22,7 +22,6 @@ const SugarLevelsFluctuate = () => {
         setError('');
 
         // Pass the fluctuation status to the parent component for further processing
-        console.log(fluctuate);
 
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem('userData'));
@@ -36,6 +35,9 @@ const SugarLevelsFluctuate = () => {
         // Perform any other actions here, like storing data or navigation
         if (fluctuate === 'yes') {
             return navigate('/specific-goals');
+        }
+        else {
+            return navigate('/high-blood-pressure')
         }
     };
 

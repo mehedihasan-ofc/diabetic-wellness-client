@@ -15,6 +15,12 @@ import AnyBelowSymptoms from "../components/AnyBelowSymptoms";
 import AskMore from "../components/AskMore";
 import SugarLevelsFluctuate from "../components/SugarLevelsFluctuate";
 import SpecificGoals from "../components/SpecificGoals";
+import HighBloodPressure from "../components/HighBloodPressure";
+import MedicationsForDiabetes from "../components/MedicationsForDiabetes";
+import PregnentInstruction from "../components/PregnentInstruction";
+import DiabeticPatientInstruction from "../components/DiabeticPatientInstruction";
+import DiabeticPatientBeCarefullIntruction from "../components/DiabeticPatientBeCarefullIntruction";
+import YouAreAdiabeticPatient from "../components/YouAreAdiabeticPatient";
 
 const router = createBrowserRouter([
     {
@@ -72,6 +78,30 @@ const router = createBrowserRouter([
             {
                 path: "/specific-goals",
                 element: <SpecificGoals />
+            },
+            {
+                path: "/high-blood-pressure",
+                element: <HighBloodPressure />
+            },
+            {
+                path: "/medications-for-diabetes",
+                element: <MedicationsForDiabetes />
+            },
+            {
+                path: "/pregnent-instruction",
+                element: <PregnentInstruction />
+            },
+            {
+                path: "/diabetic-patient-instruction",
+                element: <DiabeticPatientInstruction />
+            },
+            {
+                path: "/diabetic-patient-be-carefull-intruction",
+                element: <DiabeticPatientBeCarefullIntruction />
+            },
+            {
+                path: "/you-are-a-diabetic-patient",
+                element: <YouAreAdiabeticPatient />
             },
             {
                 path: "/result",

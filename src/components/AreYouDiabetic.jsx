@@ -20,8 +20,6 @@ const AreYouDiabetic = () => {
 
         setError('');
 
-        console.log("Are you Diabetic?", isDiabetic);
-
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem("userData"));
 

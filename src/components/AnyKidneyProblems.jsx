@@ -11,8 +11,6 @@ const AnyKidneyProblems = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission with the information about kidney problems
-        console.log('Kidney Problems:', hasKidneyProblems);
 
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem("userData"));

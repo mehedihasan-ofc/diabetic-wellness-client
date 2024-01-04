@@ -20,7 +20,6 @@ const YourSugarLevel = () => {
         }
 
         setError('');
-        console.log('Your Sugar Level:', sugarLevel);
 
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem("userData"));
@@ -32,7 +31,7 @@ const YourSugarLevel = () => {
         localStorage.setItem("userData", JSON.stringify(updatedData));
 
         // Perform other actions here, like storing data or navigation
-        if (sugarLevel < 4) {
+        if (sugarLevel <= 4) {
             return navigate('/result')
         }
         else if(sugarLevel > 4 && sugarLevel < 10) {

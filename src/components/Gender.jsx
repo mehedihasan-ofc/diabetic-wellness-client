@@ -21,9 +21,6 @@ const Gender = () => {
         // Clear any previous error messages
         setError('');
 
-        // Handle form submission with gender value
-        console.log("Selected Gender:", gender);
-
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem("userData"));
 

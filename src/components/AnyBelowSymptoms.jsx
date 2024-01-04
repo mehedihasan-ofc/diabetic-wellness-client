@@ -34,9 +34,6 @@ const AnyBelowSymptoms = () => {
 
         setError('');
 
-        // Handle form submission with the information about symptoms
-        console.log('Symptoms:', bellowSymptoms);
-
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem('userData'));
 

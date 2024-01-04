@@ -21,9 +21,6 @@ const AreYouPregnant = () => {
         // Clear any previous error messages
         setError('');
 
-        // Handle form submission with pregnancy status
-        console.log("Are you Pregnant?", isPregnant);
-
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem("userData"));
 
@@ -35,7 +32,7 @@ const AreYouPregnant = () => {
 
         // Perform any other actions here, like storing data or navigation
         if (isPregnant === "yes") {
-            return navigate('/ask-more')
+            return navigate('/pregnent-instruction')
         }
         else {
             return navigate('/are-you-diabetic')

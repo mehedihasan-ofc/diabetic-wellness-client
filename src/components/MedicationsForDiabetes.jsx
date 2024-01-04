@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const SpecificGoals = () => {
-    const [hasSpecificGoals, setHasSpecificGoals] = useState('');
+const MedicationsForDiabetes = () => {
+    const [medications, setMedications] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    const handleSpecificGoalsChange = (e) => {
-        setHasSpecificGoals(e.target.value);
+    const handleMedicationsChange = (e) => {
+        setMedications(e.target.value);
     };
 
     const handleSubmit = () => {
-        if (hasSpecificGoals === '') {
+        if (medications === '') {
             setError('Please select an option.');
             return;
         }
@@ -22,16 +22,16 @@ const SpecificGoals = () => {
         const preData = JSON.parse(localStorage.getItem('userData'));
 
         // Update previous data with gender
-        const updatedData = { ...preData, hasSpecificGoals };
+        const updatedData = { ...preData, medications };
 
         // Store updated data back to local storage
         localStorage.setItem('userData', JSON.stringify(updatedData));
 
-        // // You can navigate based on the choice if needed
-        if (hasSpecificGoals === 'yes') {
-            navigate('/medications-for-diabetes'); // Example: Navigate to another page for specific goals details
+        // Navigate based on the choice if needed
+        if (medications === 'yes') {
+            navigate('/you-are-a-diabetic-patient'); // Example: Navigate to another page for medications details
         } else {
-            navigate('/medications-for-diabetes'); // Example: Navigate to the next page
+            navigate('/you-are-a-diabetic-patient'); // Example: Navigate to the next page
         }
     };
 
@@ -39,26 +39,26 @@ const SpecificGoals = () => {
         <div className="max-w-xl mx-auto shadow-md p-10 border">
             <div className="mb-4">
                 <label className="block text-gray-700 text-xl mb-2">
-                    Do you have specific goals for managing your diabetes?
+                    Are you currently taking medications for diabetes?
                 </label>
                 <div className="flex items-center">
                     <label className="mr-4">
                         <input
                             type="radio"
-                            name="specificGoals"
+                            name="medicationsForDiabetes"
                             value="yes"
-                            checked={hasSpecificGoals === 'yes'}
-                            onChange={handleSpecificGoalsChange}
+                            checked={medications === 'yes'}
+                            onChange={handleMedicationsChange}
                         />
                         <span className="ml-2">Yes</span>
                     </label>
                     <label>
                         <input
                             type="radio"
-                            name="specificGoals"
+                            name="medicationsForDiabetes"
                             value="no"
-                            checked={hasSpecificGoals === 'no'}
-                            onChange={handleSpecificGoalsChange}
+                            checked={medications === 'no'}
+                            onChange={handleMedicationsChange}
                         />
                         <span className="ml-2">No</span>
                     </label>
@@ -78,4 +78,4 @@ const SpecificGoals = () => {
     );
 };
 
-export default SpecificGoals;
+export default MedicationsForDiabetes;

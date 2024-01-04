@@ -30,7 +30,6 @@ const HaveYou = () => {
         }
 
         setError('');
-        console.log('Selected haveYou:', haveYou);
 
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem("userData"));

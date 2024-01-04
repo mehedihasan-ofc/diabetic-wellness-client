@@ -46,8 +46,6 @@ const AnySymptoms = () => {
 
         setError('');
 
-        console.log("Selected Symptoms:", symptoms);
-
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem("userData"));
 

@@ -11,8 +11,6 @@ const AnyHeartIssues = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission with the information about heart issues
-        console.log('Heart Issues:', hasHeartIssues);
 
         // Retrieve previous data from local storage
         const preData = JSON.parse(localStorage.getItem("userData"));
