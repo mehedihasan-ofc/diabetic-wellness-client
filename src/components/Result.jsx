@@ -18,7 +18,7 @@ const Result = () => {
                 try {
                     const updatedData = { ...JSON.parse(storedData), result: userResult };
 
-                    const response = await fetch('http://localhost:5000/users', {
+                    const response = await fetch('https://diabetic-wellness-server.vercel.app/users', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ const Result = () => {
             data?.isDiabetic === 'no' &&
             data?.symptoms?.none === false &&
             parseFloat(data?.sugarLevel) >= 10 &&
-            parseFloat(data?.sugarLevel) < 12.6
+            parseFloat(data?.sugarLevel) <= 12.6
         ) {
             setUserResult("Pre diabetics");
         }
@@ -140,7 +140,7 @@ const Result = () => {
             data?.gender &&
             data?.isDiabetic === 'yes' &&
             parseFloat(data?.sugarLevel) >= 10 &&
-            parseFloat(data?.sugarLevel) < 12.5
+            parseFloat(data?.sugarLevel) <= 12.5
         ) {
             setUserResult("Pre diabetics");
         }
